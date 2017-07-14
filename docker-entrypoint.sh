@@ -9,8 +9,10 @@ if [ "$(id -u)" = '0' ] && [ "$1" = 'hugo' ]; then
         addgroup -g "${USER_MOUNT_UID}" hugo
         adduser -u "${USER_MOUNT_UID}" -D -G hugo hugo
 
-        exec su-exec hugo "$@"
+        exec su-exec hugo "$@" --baseURL "${HUGO_BASE_URL}" --appendPort=false --bind "0.0.0.0"
     fi
+
+    exec "$@" --baseURL "${HUGO_BASE_URL}" --appendPort=false --bind "0.0.0.0"
 fi
 
 exec "$@"
