@@ -1,6 +1,6 @@
 # Docker Hugo
 
-Serve a Hugo site in a docker container.
+Serve a Hugo site in a docker container. This image runs Hugo v0.25.1 on Alpine Linux 3.6.
 
 ## Usage
 ```bash
