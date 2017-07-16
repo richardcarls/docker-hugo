@@ -1,7 +1,6 @@
 FROM alpine:3.6
 
 ENV HUGO_VERSION 0.25.1
-ENV HUGO_BASE_URL "localhost"
 
 RUN apk add --update --no-cache \
         bash \
